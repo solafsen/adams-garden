@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Adam's Garden </title>
+        <link rel="icon" type="image/x-icon" href="../../images/adams-garden-logo.ico">
+        <meta name="description" content="Adam's Garden - the best restaurant in town!"> 
+
+        <!-- Fonts from Google Fonts. (https://fonts.google.com) -->
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Archivo+Black">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/Judson?query=judson">
+
+        <!-- Stylesheets -->
+        
+        <!-- Defined variables - font sizes, colors -->
+        <link rel="stylesheet" href="../../code/css/common/variables.css"> 
+
+        <!-- Main layout for four pages - grid layout, containers, top navbar, footer, etc. -->
+        <link rel="stylesheet" href="../../code/css/common/global.css" /> 
+
+        <!-- Layout according to the current page - hero image, font sizes, aside navbar, etc. -->
+        <link rel="stylesheet" href="../../code/css/accessibility.css" /> 
+
+    </head>
+
+    <body>
+
+        <div id="grid-container"> <!-- Container for the whole body - using Grid. -->
+            
+            <!-- Header with hero image and top navbar -->
+
+            <header id="hero-image"> 
+
+                <!-- Skip to main content link -->
+
+                <a href="#main" class="skip"> Skip to main content </a> 
+                
+                <!-- Ladd, A. [alstudiowebdev] (2022, June 14). 
+                Responsive and Accessible Navigation (HTML, CSS, Vanilla JS) [Video]. 
+                Youtube. https://youtu.be/IdZ-ZHLyEHs with some adjustment - in css. -->
+
+                <!-- Top navigation bar -->
+
+                <nav id="navbar" class="navbar-padding" aria-label="top navigation bar">
+                    <div class="top-navbar-container">
+
+                        <div class="nav-logo-container"> 
+
+                            <a href="../../index.html"> 
+
+                                <!-- Logo from Adobe Express -->
+
+                                <span aria-hidden="true"> 
+                                <img id="hidden-img-dark" src="../../images/adams-garden-logo.png" alt="Adam's Garden logo" height="104" width="110" /></span>
+                                <img id="hidden-img-light" src="../../images/adams-garden-logo-1.png" alt="Adam's Garden logo" height="104" width="110" /></span>
+                                <span class="sr-only"> Home </span>
+
+                            </a>
+
+                            <!-- It works as a button to show or hide navigation links. -->
+
+                            <button type="button" id="mobileMenuTrigger" 
+                            aria-expanded="false" 
+                            aria-controls="navigationLinks" 
+                            aria-label="Open and close navigation"
+                            >
+
+                                <!-- Create a hamburger bar and an close icon (X). -->
+
+                                <span class="line1"></span>
+                                <span class="line2"></span>
+                                <span class="line3"></span>
+
+                            </button>
+
+                        </div>
+
+                        <!-- Navigation links - hidden on small screen. Visible on large screen. -->
+
+                        <div id="navigationLinks" class="nav-links-container">
+
+                            <ul class="nav-links">
+
+                                <li><a href="../../code/html/menu.html" class="topnav-a"> Menu </a></li>
+                                <li><a href="../../code/html/booking.html" class="topnav-a"> Booking </a></li>
+                                <li><a href="../../code/html/topical.html" class="topnav-a"> Story </a></li>
+                                <li><a href="../../code/html/accessibility.html" class="topnav-a"> Accessibility </a></li>
+                                <li><a href="#contact-us" class="topnav-a"> Contact us </a></li>
+
+                            </ul>
+
+                        </div>
+
+                     </div>
+                </nav> 
+
+                <!-- Javascript for the open and close navigation -->
+
+                <script src="../../script/navbar.js"></script>
+
+            </header>
+
+            <!-- Main container -->
+
+            <div id="main-content" class="container main-content">
+
+                <!-- Aside navigation bar - related to the text inside the main section. -->
+                
+                <aside> <!-- Må fikses etter at jeg har skrevet ferdig teksten -->
+                
+                    <nav class="aside-navbar" aria-label="aside navigation bar">
+
+                        <!-- Works like a hyperlinks that helps to navigate to other pages. -->
+
+                        <a href="#coding-choices" class="aside-a"> Choices </a>
+                        <a href="#testing" id="booking" class="aside-a"> Testing </a>
+
+                    </nav>
+            
+                </aside>
+
+                <!-- Main content with text. -->
+
+                <main class="main-container">
+
+                    <h1 id="main" tabindex="-1" class="text"> Accessibility </h1>
+                    
+                    <section>
+
+                        <h2 class="text hyperlinks" id="coding-choices"> Coding choices </h2>
+
+                        <p class="text paragraph-spacing">
+                            Before we started out with the coding part, 
+                            we check through the checklist that was on 
+                            <strong>
+                                <a class="hyperlinks" href="https://www.a11yproject.com/" target="_blank">The A11Y Project.</a>
+                            </strong><span class="sr-only"> Opens a new window </span>
+                            We used tools such as 
+                            <strong>
+                                <a class="hyperlinks" href="https://color.adobe.com/nb/create/color-contrast-analyzer" target="_blank">contrast checker,</a>
+                            </strong><span class="sr-only"> Opens a new window </span>
+                            <strong>
+                                <a class="hyperlinks" href="https://hemingwayapp.com/" target="_blank">text editor</a>
+                            </strong><span class="sr-only"> Opens a new window </span> 
+                            and <strong>
+                                    <a class="hyperlinks" href="https://color.adobe.com/nb/create/color-wheel" target="_blank">colour wheel</a>
+                                </strong><span class="sr-only"> Opens a new window </span> 
+                            to check that it passed WCAG level AA. For example, we selected colours that are safe for people that have colour blindness. 
+                        </p>
+
+                        <p class="text paragraph-spacing">
+                            The term average user is vague, 
+                            so we decided to practice as much accessibility as possible. 
+                            We're inexperience when it comes to make a website, 
+                            so there will be some faults that we didn't see. 
+                        </p> 
+
+                        <p clas="text paragraph-spacing">
+                            We tried to be wary with the use of semantic and non-semantic elements. 
+                            Our styling sheets usually followed the pattern of our HTML files. 
+                            There is always an exception. 
+                        </p>
+
+                        <p class="text paragraph-spacing">
+                            Our website has two colour scheme, dark and light. 
+                            It works from small screen devices to large screen devices. 
+                        </p>
+
+                    </section>
+
+                    <section>
+
+                        <h2 class="text hyperlinks" id="testing"> Testing for accessibility </h2>
+
+                        <p class="text paragraph-spacing">
+                            Before we tested our website, we put our codes through 
+                            <strong>
+                                <a class="hyperlinks" href="https://validator.w3.org/" target="_blank">HTML validation</a>
+                            </strong><span class="sr-only"> Opens a new window </span> 
+                            and <strong>
+                                    <a class="hyperlinks" href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS validation.</a>
+                                </strong><span class="sr-only">Opens a new window</span>
+                            The results are as followed: 
+                        </p>
+
+                        <figure>
+                            <img class="validation" src="../../images/accessibility/html-validation.png" alt="">
+                            <img class="validation" src="../../images/accessibility/css-validation.png" alt="">
+                            <figcaption> Fig. 1 - HTML & CSS Validation </figcaption>
+                        </figure>
+        
+                        <p class="text paragraph-spacing">
+                            We used 
+                            <strong>
+                                <a class="hyperlinks" href="https://wave.webaim.org/" target="_blank">
+                                    <abbr title="Web Accessibility Evaluation tool" style="text-decoration: none;">WAVE</abbr></a>
+                            </strong><span class="sr-only"> Opens a new window </span>
+                            to test for accessibility. The results are as followed: 
+                        </p>
+
+                        <!-- Screenshots from testing on https://wave.webaim.org/ -->
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/index-page-light.png" alt="No errors on light index page" >
+                            <figcaption> Fig. 2.1 - Homepage (light) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/index-page-dark.png" alt="No errors on dark index page">
+                            <figcaption> Fig. 2.2 - Homepage (dark) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/booking-page-light.png" alt="No errors on light booking page">
+                            <figcaption> Fig. 3.1 - Booking page (light) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/booking-page-dark.png" alt="No errors on dark booking page">
+                            <figcaption> Fig. 3.2 - Booking page (dark) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/menu-page-light.png" alt="No errors on light menu page">
+                            <figcaption> Fig. 4.1 - Menu page (light) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/menu-page-dark.png" alt="No errors on dark menu page">
+                            <figcaption> Fig. 4.2 - Menu page (dark) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/accessibility-page-light.png" alt="No errors on light menu page">
+                            <figcaption> Fig. 5.1 - Accessibility page (light) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/accessibility-page-dark.png" alt="No errors on dark menu page">
+                            <figcaption> Fig. 5.2 - Accessibility page (dark) </figcaption>
+                        </figure>
+
+                        <figure>
+                            <img class="accessibility-check" src="../../images/accessibility/topical-page.png" alt="No errors on dark menu page">
+                            <figcaption> Fig. 6 - Topical page </figcaption>
+                        </figure>
+
+                        <p class="text">
+                            To be honest with you, when we first tested our website 
+                            there were some errors. But we fixed and solved it 
+                            by google for answers. The final results are as we expected. 
+                        </p>
+
+                    </section>
+                    
+                </main>
+            </div>
+
+            <!-- Footer with contact informations, address and opening hours. -->
+
+            <footer>
+                <div id="footer-container" class="container footer-container">
+
+                    <section id="address">
+
+                        <h3> Address </h3>
+                        <address>
+                            Adam's Garden <br>
+                            Edensgata 2 <br> 
+                            7022, Elven
+                        </address>
+
+                    </section>
+
+                    <section id="opening-hours">
+
+                        <h3> Opening hours </h3>
+                        <p>   
+                            Monday-Friday <br> (12.00 - 21.00) <br>
+                            Saturdag <br> (14.00 - 22.00) <br>
+                            Sunday <br> (14.00 - 22.00)
+                        </p>
+
+                    </section>
+
+                    <section id="contact-us">
+
+                        <h3> Contact us </h3>
+                        <address>
+                            <a href="tel:+4701010011" class="style-links"> Telephone number: <br> <span class="footer-links">  +47 010 10 011 </span></a> <br><br>
+                            <a href="mailto:reservation@adamsgarden.no" class="style-links"> For other inquiries, <br>
+                            <span class="footer-links"> please send us an e-mail </span></a>
+                            
+                        </address>
+                    </section>
+
+                </div>
+            </footer>
+
+        </div>
+    </body>
+</html>

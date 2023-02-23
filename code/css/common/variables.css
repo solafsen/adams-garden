@@ -1,0 +1,84 @@
+
+:root {
+
+    /* Color palette */
+
+    --color-dark: rgb(8, 8, 8);
+    --color-light: rgb(255, 255, 255);
+    --color-primary: rgb(230, 230, 230);
+    --color-secondary: rgb(37, 41, 112);
+    --color-tertiary: rgb(75, 70, 135);
+
+    --foreground: var(--color-dark);
+    --background: var(--color-light);
+
+    /* For font sizing */
+
+    /* Source: Galante, A. (2020, April 23). Accessible Font Sizing, Explained. 
+    CSS-TRICKS. https://css-tricks.com/accessible-font-sizing-explained/ */
+
+    font-size: 62.5%; /* 10px */
+    --font-size--small: 1.4rem; /* 14px */
+    --font-size--default: 1.6rem; /* 16px */
+    --font-size--large: 2.4rem; /* 24px */
+
+    /* For line-height, letter- and word-spacing */
+
+    --letter-spacing--small: 0.2rem; /* 0.12 times the font-size */
+    --letter-spacing--default: 0.2rem;
+    --letter-spacing-l-arge: 0.3rem;
+
+    --line-height--small: 2.1rem; /* 1.5 times the font-size */
+    --line-height--default: 2.4rem; 
+    --line-height--large: 3.6rem;
+
+    --word-spacing--small: 0.22rem; /* 0.16 times the font-size */
+    --word-spacing--default: 0.3rem;
+    --word-spacing--large: 0.4rem;
+
+    /* Styling - use only in some HTML */
+
+    /* Menu */
+
+    --box-shadow--menu: rgb(168, 165, 165);
+
+    /* Booking */
+
+    --bg-color--carousel: rgb(0, 0, 0, 0.8);
+    --bg-color--form: rgb(242, 242, 242);
+    --box-shadow--one: rgb(0, 0, 0, 0.12); 
+    --box-shadow--to: rgb(0, 0, 0, 0.19);
+    --color-carousel: rgb(255, 255, 255);
+    
+}
+
+/* Dark color scheme - for user whose preferences color scheme is dark */
+
+@media (prefers-color-scheme: dark) {
+    :root { 
+
+        /* Color palette */
+
+        --color-light: rgb(255, 249, 237);
+        --color-dark: rgb(71, 69, 84);
+        --color-primary: rgb(105, 102, 118);
+        --color-secondary: rgb(255, 231, 120);
+        --color-tertiary: rgb(255, 244, 108); 
+
+        --foreground: var(--color-light);
+        --background: var(--color-dark);
+    
+        /* Menu */
+
+        --box-shadow--menu: rgb(44, 42, 56);
+
+        /* Booking */
+
+        --bg-color--carousel: rgb(0, 0, 0, 0.2);
+        --bg-color--form: rgb(86, 83, 98);
+        --box-shadow--one: rgb(0, 0, 0, 0.12); 
+        --box-shadow--to: rgb(0, 0, 0, 0.19);
+
+    }
+
+}

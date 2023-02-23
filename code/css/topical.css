@@ -1,0 +1,221 @@
+
+header  {
+    background-image: url(../../images/topical/header-lp-plates.jpg);
+    /*background-position: center;*/
+	background-size : 400px;
+    height: 400px;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 120%;
+    background-color: rgb(243, 243, 243);
+    /* padding: 25px; */
+}
+
+ /* v - aside(where the navigation bar lies), a,b,c,d,e,m,p,q are articles and n - footer */
+
+.main_page {  
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "v a a a h"
+    "v b b b p"
+    ". c c c m"
+    ". d d d q"
+    ". e e e ." 
+	"n n n n n";
+
+    height:100vh;
+}
+
+article { margin-top: 10px; padding:1em; }
+
+aside { margin-top: 40px; padding:1em; }
+aside li { visibility : visible; }
+li { visibility : hidden; }
+
+/* unvisited link */
+a:link { color: #a80600; }
+
+/* visited link */
+a:visited { color: #005e00; }
+
+/* mouse over link */
+a:hover { color: #9e5431; }
+
+#hip_hop:hover{ color: #000000; }
+
+/* selected link */
+a:active { color: #808080; }
+
+.line1 ul li {
+    border-bottom: 1px solid #808080;
+    list-style-type: none;
+    padding: 4px;
+}
+
+h1, h3 { text-align : center; }
+h2 { font-size :1.1em; }
+ 
+a:link { text-decoration: none; }
+
+.line1 { grid-area: v; }
+.line3 { grid-area: a; }
+.line4 { grid-area: b; }
+.line5 { grid-area: c; }
+.line6 { grid-area: d; }
+ 
+.line7 {
+    grid-area: e;
+    /* margin-bottom: 10px;
+    padding-bottom: 30%;  */
+}
+
+.line8 { grid-area: h; margin-top: 50px; }
+.line9 { grid-area: p; }
+.line10 { grid-area: m; }
+.line11 { grid-area: n; }
+.line12 { grid-area: q; }
+
+/* Styling the picture that shows Carlos interest */
+
+img {
+
+    width: 100%;
+    height: 80%;
+    transition: 1s;
+	margin-top: 30px;
+	border-radius: 1.5em;
+
+}
+
+img:hover { transform: scale(1.6); }
+
+.tooltip {
+
+	position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+	text-decoration: none;
+
+}
+
+/*
+#text{
+	float : right;
+}
+*/
+
+ .tooltip .tooltiptext {
+
+    visibility: hidden;
+    position: absolute;
+    background-color: #eb6b39;
+    color: #000000;
+    height: 80px;
+    width: 100%;
+
+}
+
+.tooltiptext > a { color: #000; }
+
+.tooltiptext > a:link, .tooltiptext > a:visited { color: #000;}
+
+.tooltiptext > a:hover, .tooltiptext > a:active { color: #000; }
+
+.tooltip:hover .tooltiptext {
+	
+	visibility: visible;
+    border: 1px solid #808080;
+    text-align: center;
+    border-radius: 6px;
+	
+}
+
+/* Styling the footer which is represented by alphabet n */ 
+
+footer {
+
+    text-align:center;
+	background-color: #eb6b39;
+	height : 200px;
+
+}
+
+#copyright { margin-top :90px; }
+
+
+/* The responsive version starts when the screen size is 700px */
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+	
+	header {
+		
+		width : 100%;
+		background-repeat: repeat;
+		background-image: url(../../images/topical/header-lp-plates.jpg);
+
+    }
+
+	.main_page {
+	
+		grid-template-columns: 1fr;
+		grid-template-rows:0.4fr 0.4fr 0.4fr 0.4fr 0.4fr
+		0.4fr 0.4fr 0.4fr 0.4fr;
+		grid-template-areas:
+		"v" "a" "h" "b" "p" 
+		"c" "m" "d" "q" "e" "n" ;
+		
+	}
+	
+	img {
+
+    width: 100%;
+    height: 75%;
+    transition: 1s;
+	margin-top: 30px;
+	border-radius: 1.5em;
+
+	}
+
+	img:hover { transform: scale(1.1); }
+
+	aside li {
+		
+		display : inline-block;
+		visibility : visible;
+		font-size :1em;
+		grid-row:auto /span 5;
+		
+	}
+	
+	/*nav ul a{
+		
+		text-decoration : none;
+	
+	}
+	aside li{
+		
+		visibility: hidden;
+	}
+	*/
+
+	h3 { visibility: hidden; }
+	
+	.line1 { margin : 0 auto; padding :0px; }
+	
+	.line3 {
+
+    grid-area: a;
+	margin : 0px;
+	padding :1em;
+	
+	}
+
+	grid-area { margin : 0px 50px; }
+
+}

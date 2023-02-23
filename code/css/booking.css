@@ -1,0 +1,488 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+
+/* Header - Hero image */
+
+#hero-image {
+    /* Anonymous [freepic.diller]. (n.d.). 
+    Serving wedding table vintage style [photo], 
+    https://www.freepik.com/free-photo/serving-wedding-table-vintage-style_5698054.htm */
+
+    background-image:url("../../images/booking/wedding-decoration.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 40rem;
+    width: 100%;
+}
+
+/* Navigation bar - aside */
+
+aside .aside-navbar { 
+    background-color: var(--color-primary);
+    display: grid; 
+    font-size: var(--font-size--default);
+    grid-template-columns: repeat(3, auto); 
+    justify-content: space-evenly; 
+    letter-spacing: var(--letter-spacing--default);
+    line-height: var(--line-height--default);
+    padding: 0.8rem; 
+    word-spacing: var(--word-spacing--default);
+}
+
+.aside-navbar .aside-a { padding: 0.8rem; } 
+
+/* Font sizes - for main section */
+
+main {
+    font-size: var(--font-size--default);
+    letter-spacing: var(--letter-spacing--default);
+    line-height: var(--line-height--default);
+    word-spacing: var(--word-spacing--default);
+}
+
+/* Grid layout - main container */
+
+#main-container {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 1fr;
+}
+
+.padding { padding: 0rem 1rem; } 
+
+h1 { 
+    font-size: var(--font-size--large); 
+    font-weight: bold; 
+    letter-spacing: var(--letter-spacing--large); 
+    line-height: var(--line-height--large); 
+    margin-bottom: 4rem;
+    text-align: center;
+    word-spacing: var(--word-spacing-large);
+    text-align: center;
+} 
+
+.paragraph-spacing { margin-bottom: 3.2rem; }
+
+/* Hyperlinks - to different part of the main section */
+
+main .hyperlinks { text-decoration: none; color: var(--foreground); }
+
+main .hyperlinks:focus{ color: var(--color-secondary); background-color: var(--color-primary); }
+
+main .hyperlinks:hover { color: var(--color-tertiary); text-decoration: underline; }
+
+/* 1 - Images carousel */
+
+.padding-img { padding: 0rem 1rem; vertical-align: middle; } 
+
+.slideshow-container {
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Hide the images by default */
+
+.imagesSlides { display: none; }
+
+/* Fading animation */
+
+.fade { animation-duration: 1.5s; animation-name: fade; }
+
+@keyframes fade { from {opacity: .4} to {opacity: 1} }
+
+/* Shows the current picture position - e.g. 2/4 */
+
+.numbers {
+    background-color: var(--bg-color--carousel);
+    color: var(--color-carousel);
+    left: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    position: absolute;
+    top: 0.5rem;
+}
+
+.images { aspect-ratio: 1/1; width: 100%; } /* Adjust image size */
+
+/* Caption for images */
+
+.img-caption {
+    background-color: var(--color-primary);
+    bottom: 0.2rem;
+    color: var(--foreground);
+    font-size: var(--font-size--small);
+    letter-spacing: var(--letter-spacing--small);
+    line-height: var(--line-height--small);
+    margin: 0;
+    padding: 0.8rem 1.2rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    word-spacing: var(--word-spacing--small);
+}
+
+/* Next & previous buttons */
+
+.prev, .next {
+    background-color: var(--bg-color--carousel);
+    border-radius: 0 0.3rem 0.3rem 0;
+    color: var(--color-carousel);
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: -2.2rem;
+    padding: 1.6rem;
+    position: absolute;
+    top: 50%;
+    transition: 0.6s ease;
+    user-select: none;
+    width: auto;
+}
+
+.next { border-radius: 0.3rem 0 0 0.3rem; right: 0; } /* Button to the right */
+
+/* The indicators - looks like a line */
+
+#text-align-line { text-align: center; }
+
+.line {
+    background-color: var(--color-primary);
+    border-radius: 10%;
+    border:  0.1rem solid var(--color-primary);
+    cursor: pointer;
+    display: inline-block;
+    height: 0.5rem;
+    margin-top: 1.5rem;
+    transition: background-color 0.6s ease;
+    width: 4rem;
+}
+
+.active-carousel, .line:hover { 
+    background-color: var(--foreground); 
+    border: 0.1rem solid var(--foreground); 
+}
+
+/* 2 - Booking form */
+
+h2 {
+    font-size: var(--font-size--large); 
+    font-weight: bold; 
+    letter-spacing: var(--letter-spacing--large); 
+    line-height: var(--line-height--large); 
+    text-align: center;
+    word-spacing: var(--word-spacing-large);
+}
+
+/* Add a background color and some padding around the form */
+
+#booking-container {
+    background-color: var(--bg-color--form);
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+
+.booking-form { 
+    display: grid; 
+    grid-template-rows: repeat(1, auto); 
+    padding: 2rem; 
+    row-gap: 2rem;
+}
+
+.a-grid-and-gap {  
+    display: grid; 
+    gap: 1rem;
+    grid-template-columns: repeat(1, auto);
+}
+
+/* Styling - input */
+
+input[type=text], input[type=tel], input[type=email], 
+input[type=number], input[type=datetime-local], select, textarea {
+    border: 0.1rem solid var(--color-primary); 
+    border-radius: 0.4rem; 
+    box-sizing: border-box; 
+    margin-bottom: 0.6rem; 
+    margin-top: 0.6rem;
+    padding: 1.2rem; 
+    resize: vertical;
+    width: 100%; 
+}
+
+select { background-color: var(--color-carousel); }
+
+/* Styling - submit button */
+
+.booking-form button { /* Remove some default values */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size--small);  
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing--small); 
+    line-height: var(--line-height--small); 
+    word-spacing: var(--word-spacing--small); 
+}
+
+button[type=submit] {
+    background-color: var(--color-tertiary);
+    border: none;
+    border-radius: 0.4rem;
+    color: var(--background);
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+}
+
+button[type=submit]:hover { background-color: var(--color-secondary); }
+
+/* 3 - Customer testimonals */
+
+#card-container { /* Container for cards */ 
+    display: grid; 
+    grid-template-rows: repeat(1, auto); 
+    max-width: 100%; 
+    row-gap: 3rem; 
+}
+
+#card-container > .card { /* Container - for a card */
+    background-color: var(--bg-color--form);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.4rem 0.8rem 0 var(--box-shadow--one), 
+    0 0.6rem 2rem 0 var(--box-shadow--to);
+    display: grid; 
+    grid-template-rows: repeat(1, auto);
+    margin: 0 auto;
+    row-gap: 3rem; 
+    text-align: center;
+}
+
+/* Profile avatar */
+
+.card .img-card { padding-top: 2rem; } 
+
+.img-card .profile-img { 
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+}
+
+h3 { /* Font size */
+    font-size: var(--font-size--default);  
+    letter-spacing: var(--letter-spacing--default); 
+    line-height: var(--line-height--default); 
+    word-spacing: var(--word-spacing--default); 
+}
+
+/* Add colors to star icon */
+
+.stars { color: var(--color-secondary); }
+.stars:hover { color: var(--color-tertiary)}
+
+/* Styling - quote from customers */
+
+q { 
+    font-size: var(--font-size--small);
+    letter-spacing: var(--letter-spacing--small);
+    line-height: var(--line-height--small);
+    padding: 0rem 1.5rem 3rem 1.5rem;
+    word-spacing: var(--word-spacing--small);
+}
+
+/* Footer */
+
+h4 {
+    font-size: var(--font-size--large);  
+    letter-spacing: var(--letter-spacing--large); 
+    line-height: var(--line-height--large); 
+    text-align: left;
+    word-spacing: var(--word-spacing--large); 
+}
+
+footer address, footer p {
+    font-size: var(--font-size--default);
+    letter-spacing: var(--letter-spacing--default);
+    line-height: var(--line-height--default);
+    word-spacing: var(--word-spacing--default);
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 30em) and (min-width: 23em) { /* 368px - 480px */
+
+    /* Small adjustment - padding */
+
+    .aside-navbar .aside-a { padding: 1rem; }
+    
+    .padding { padding: 0rem 2rem; }
+
+    .padding-img { padding: 0rem 1.5rem; }
+
+    .card .img-card { padding-top: 3rem; }
+
+    q { padding: 0rem 1.8rem 3rem 1.8rem; } 
+}
+
+@media only screen and (max-width: 41.5em) and (min-width: 30.06em) { /* 481px - 664px */
+
+    /* Small adjustment - padding */
+
+    .aside-navbar .aside-a { padding: 1rem; }
+
+    .padding { padding: 0rem 1.5rem; }
+
+    .padding-img { padding: 0rem 1.5rem; }
+
+    .card .img-card { padding-top: 3rem; }
+
+    q { padding: 0rem 1.8rem 3rem 1.8rem; }
+}
+
+@media only screen and (max-width: 48.8125em) and (min-width: 41.5625em) { /* 665px - 781px */
+
+    #hero-image { height: 45rem; }
+
+    .aside-navbar .aside-a { padding: 1rem; }
+
+    .padding { padding: 0rem 2rem; }
+
+    .padding-img { padding: 0rem 2rem; }
+
+    #card-container { /* Add columns - 2 cards in 1 row */
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #card-container > .card { /* Change the styling of box-shadow */
+        box-shadow: 0.5rem 0.5rem rgb(0, 0, 0, 0.19);
+    }
+
+    .card .img-card { padding-top: 3rem; }
+
+    q { padding: 0rem 2rem 3rem 2rem; }
+}
+
+@media only screen and (max-width: 57.5625em) and (min-width: 48.875em) { /* 782px - 921px */
+
+    #hero-image { height: 50rem; }
+
+    /* Change layout for aside navbar from 3 colums to 1 column */
+
+    aside .aside-navbar { 
+        border: 0.1em solid var(--background);
+        grid-template-columns: repeat(1, auto); 
+        line-height: 3.5rem;
+        padding: 2rem;
+        position: sticky; 
+        position: -webkit-sticky; /* Safari */
+        top: 10rem;
+    }
+
+    .aside-navbar .aside-a { padding: 1rem; }
+    
+    .padding { padding: 0rem; }
+
+    .padding-img { padding: 0rem; }
+
+    #card-container { /* Add columns - 2 cards in 1 row */
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #card-container > .card { /* Change the styling of box-shadow */
+        box-shadow: 0.5rem 0.5rem rgb(0, 0, 0, 0.19);
+    }
+
+    .card .img-card { padding-top: 3rem; }
+
+    q { padding: 0rem 2rem 3rem 2rem; }
+
+    h4 {
+        font-size: var(--font-size--default);  
+        letter-spacing: var(--letter-spacing--default); 
+        line-height: var(--line-height--default); 
+        word-spacing: var(--word-spacing--default); 
+    }
+}
+
+@media only screen and (max-width: 64em) and (min-width: 57.625em) { /* 922px - 1024px */
+
+    #hero-image { height: 50rem; }
+
+    aside .aside-navbar { 
+        border: 0.1em solid var(--background);
+        grid-template-columns: repeat(1, auto);
+        line-height: 3.5rem;
+        padding: 2rem;
+        position: sticky; 
+        position: -webkit-sticky; /* Safari */
+        top: 10rem;
+    }
+
+    .aside-navbar .aside-a { padding: 1rem; }
+    
+    .padding { padding: 0rem; }
+
+    .padding-img { padding: 0rem; }
+
+    #card-container { 
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #card-container > .card { 
+        box-shadow: 0.5rem 0.5rem rgb(0, 0, 0, 0.19);
+    }
+
+    .card .img-card { padding-top: 3rem; }
+
+    q { padding: 0rem 2rem 3rem 2rem; }
+
+    h4 {
+        font-size: var(--font-size--default);  
+        letter-spacing: var(--letter-spacing--default); 
+        line-height: var(--line-height--default); 
+        word-spacing: var(--word-spacing--default); 
+    }
+}
+
+@media only screen and (min-width: 64.0625em) { /* 1025 and up */
+
+    #hero-image { height: 60rem; }
+
+    aside .aside-navbar { 
+        border: 0.1em solid var(--background);
+        grid-template-columns: repeat(1, auto);
+        line-height: 4.5rem;
+        line-height: 3.5rem;
+        padding: 2rem;
+        position: sticky; 
+        position: -webkit-sticky; /* Safari */ 
+        top: 10rem;
+    }
+
+    .aside-navbar .aside-a { padding: 1rem; }
+    
+    .padding { padding: 0rem; }
+
+    .padding-img { padding: 0rem; }
+
+    #card-container { 
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    #card-container > .card { 
+        box-shadow: 0.5rem 0.5rem rgb(0, 0, 0, 0.19);
+    }
+
+    .card .img-card { padding-top: 3rem; }
+
+    q { padding: 0rem 3rem 3rem 3rem; }
+
+    h4 {
+        font-size: var(--font-size--default);  
+        letter-spacing: var(--letter-spacing--default); 
+        line-height: var(--line-height--default); 
+        word-spacing: var(--word-spacing--default); 
+    }
+}
