@@ -1,2 +1,2 @@
-# adams-garden
-A restaurant website - V2023
+# Adams garden
+A restaurant website - Exam V2023
